@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        .ans,.que 
+        {
+            background: pink;
+            border: 2px solid;
+        }
+        .ans 
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="que">Question..?</div>
+    <div class="ans">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias magni officia. Placeat at quaerat libero incidunt a iusto consequatur, molestias similique accusantium ipsum, adipisci, assumenda ab? Velit, impedit recusandae.</div>
+
+    <button>BUTTON</button>
+    <script>
+        $('.que').click(function(){
+
+            $('.ans').slideToggle();
+        })
+
+        $('.que').click(function(){
+
+           
+
+            $('button').html( $('.que').text())
+        })
+
+    </script>
+    
+</body>
+</html>
