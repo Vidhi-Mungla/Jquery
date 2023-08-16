@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- jQuery: Javascript library / Framework 
+
+    Framework: write less do more
+
+    call jQuery CDN file 
+
+   var x =  document.getElementById('idName');
+
+   x.attribute 
+   x.method()
+
+    document.querySelector('#idName');
+    document.querySelector('.className');
+
+    $('selector').method()
+
+    selector == > keyword(document/this)/tag/id/class
+
+
+
+   x.method();
+   $(keyword)
+   $(document)
+   $(this)
+    x =  $("tagName")
+    $("#idName")
+    $('.className')
+
+
+ -->
+
+    <p class="x" id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis
+      veniam itaque cum dolorum similique repellat laboriosam? Officiis quia
+      laborum, modi omnis earum excepturi maxime voluptates, quibusdam, quae
+      repudiandae inventore.
+    </p>
+
+    <button id="b1">HIDE</button>
+
+    <button class="b1">Show</button>
+
+    <button id="b2">HIDE-SHOW</button>
+
+    <script>
+      // document.getElementById('') = $('p')
+
+    //   this==> points to cuurent object
+
+      //var x = $('p');
+
+      // console.log(x)
+
+      //    $('p').click( ()=> {
+
+      //         $('p').hide();
+
+      //    })
+
+      // $('.x').click( ()=> {
+
+      //     $('#para').hide();
+
+      //     })
+      $(document).ready(function(){
+
+
+        //    $('p').click(function(){
+        //     $('p').hide(1000);
+        //    })
+
+            
+           $('p').click(function(){
+            $(this).hide(1000);
+           })
+
+
+           $('#b1').click(function(){
+            // $('#para').hide(1000);
+            $('#para').fadeOut(1000);
+           })
+
+
+           $('.b1').click(function(){
+            // $('p').show(1000);
+            $('#para').fadeIn(1000);
+           })
+
+
+           $('#b2').click(function(){
+            // $('.x').toggle(1000);
+            // $('.x').fadeToggle(1000);
+            $('.x').fadeTo(1000,0.5);
+           })
+
+
+
+      })
+
+     
+    </script>
+  </body>
+</html>

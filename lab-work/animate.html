@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquerycdn.js"></script>
+    <style>
+
+        div 
+        {
+            height: 100px;
+            width: 100px;
+            background: lightblue;
+            position: absolute;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>Hello </p>
+    <button>Animate ME</button>
+
+    <div>  </div>  
+    
+    <script>
+
+    //   $("button").click(function()
+    //   {
+
+    //     $('p').append("vidhi");
+
+    //     $('div').animate({"left":"200px","margin-top":"100px"})
+    //   })
+
+
+    $("button").click(() =>
+      {
+
+        $('p').append("vidhi");
+
+        $('div').animate({"left":"200px","margin-top":"100px"})
+      })
+      
+
+    </script>
+    
+</body>
+</html>

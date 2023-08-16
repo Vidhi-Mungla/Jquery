@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquerycdn.js"></script>
+
+    <style>
+      .xyz
+       {
+        height: 100px;
+        width: 150px;
+        background: lightpink;
+       }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <button class="b1">Add CSS</button>
+    <button class="b2">Remove CSS</button>
+    <button class="b3">Toggle CSS</button>
+
+    <script>
+
+      // $('selector').css("property","value")
+      // $('h1').css("color","red");
+      // $('h1').css("height","100px");
+      // $('h1').css("width","100px");
+      // $('h1').css("background-color","#000");
+      // $('h1').css("font-size","30px");
+      // $('selector').css({'property':'value','property':'value','property':'value','property':'value'})
+      // $("h1").css({"color":"red","height":"100px","width":"100px","background":"lightblue"})
+
+      $("h1").addClass("xyz");
+      $("h1").removeClass("xyz");
+
+      $(".b1").click(function () {
+        $("h1").addClass("xyz");
+      });
+
+      $(".b2").click(function () {
+        $("h1").removeClass("xyz");
+      });
+
+      $(".b3").click(function () {
+        $("h1").toggleClass("xyz");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style> 
+        .main *
+        {
+            border:3px solid;
+            padding: 35px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="gp">GP 
+            <ul> UL 
+                <li>LI
+                    <span>SPAN</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="main">
+        <div class="gp">GP 
+            <ul> UL 
+                <li>LI
+                    <span>SPAN</span>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <script>
+        // $('.gp').children().css("color","red")
+
+        // $('.gp').find('ul').css("border","9px solid red")
+
+        // $('.gp').find('li').css("border","9px solid green")
+
+        // $('.gp').find('span').css("border","9px solid blue")
+
+
+        // $('span').parents().css("border","9px solid red");
+
+        // $('span').parents(".gp").css("border","9px solid red");
+
+        // $('span').parents("ul").css("border","9px solid green");
+
+        // $('span').parents("li").css("border","9px solid blue");
+
+        $('span').parentsUntil(".gp").css("border","9px solid red");
+
+       
+    </script>
+    
+</body>
+</html>

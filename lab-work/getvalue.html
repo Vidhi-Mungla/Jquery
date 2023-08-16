@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquerycdn.js"></script>
+</head>
+<body>
+    <h1>Vidhi</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis neque iste obcaecati architecto blanditiis, vero, velit at atque libero id nam exercitationem dolorem enim quod et, numquam eius non iure.</p>
+
+    <a href="x.html">Link</a>
+
+    <img src="img.jpg" alt="No Image">
+
+    <input type="text" value="Hello">
+</body>
+
+<script>
+
+    // $('h1').html("Riddhi");
+    // $('h1').html("<u>Riddhi</u>");
+     $('h1').text("Riddhi");
+    // $('h1').text("<u>Riddhi</u>"); -----> not work
+
+    // $('p').html("<u><b>paragraph</b></u>");
+    $('p').text("paragraph");
+
+    $('a').html("HYPERLINK");
+
+
+    // ---->attr define not html\text work for img and input
+
+      $('img').attr("alt","Not Available");  
+
+
+    $('input').attr("value","No Value");
+
+// ---> two type of value change throw attr and value
+// ---> val priority high
+
+$('input').val("your Choice");
+
+$('p').html($('h1').html());
+
+alert( $('p').html());
+
+ 
+$('img').attr("alt",$('h1').html())
+
+$('p').mouseenter(function(){
+    $("input").val($('h1').html())
+})
+
+
+    
+
+
+
+</script>
+</html>
