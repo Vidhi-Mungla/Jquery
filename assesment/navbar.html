@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+     *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navbar
+    {
+        height: 100px;
+        width: 100%;
+        display: flex;
+    }
+    .logo
+    {
+        height: 100px;
+        width: 30%;
+        }
+    .logo .round
+    {
+        height: 50px;
+        width: 50px;
+        border-radius:50%;
+        background-image: url(https://images.pexels.com/photos/1391495/pexels-photo-1391495.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        margin-top: 25px;
+        margin-left: 50px;
+        background-size: 100% 100%;
+
+    }
+    span{
+        display: none;
+    }
+    .nav-links
+    {
+        height: 100px;
+        width: 70%;
+        text-align: right;
+        padding-right: 50px;
+        line-height: 100px;
+    }
+    .navbar .nav-links li
+    {
+    display: inline-block;
+    list-style: none;
+    
+   }
+    .navbar .nav-links a
+    {
+        text-decoration: none;
+        color: black;
+
+    }
+    @media(max-width:800px)
+   {  
+    span
+    {
+        display: block;
+        font-size: 30px;
+        line-height: 100px;
+        text-align: right;
+    }
+    .navbar .nav-links li
+{
+    display: none;
+}
+   
+
+
+}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="round"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Contact</a></li>
+            <span><i class="fa-solid fa-bars"></i></span>
+        </ul>
+    </nav>
+
+    <script>
+          $(document).ready(function() {
+            $("span").click(function() {
+                $(".navbar .nav-links li").slideToggle();
+            });
+            
+            $(window).resize(function() {
+                if ($(window).width() > 800) {
+                    if ($(".navbar .nav-links li").is(":hidden")) {
+                        $(".navbar .nav-links li").removeAttr("style");
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
