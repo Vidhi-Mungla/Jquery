@@ -1,0 +1,89 @@
+1)• What is jQuery?
+===>  
+jQuery is a fast, small, and feature-rich JavaScript library designed to simplify and enhance the client-side scripting of HTML. It provides a concise
+ and easy-to-use API for various tasks related to DOM manipulation, event handling, animations, AJAX interactions, and more. jQuery allows developers 
+ to write less code while achieving more functionality and cross-browser compatibility. It was particularly popular in the earlier days of web 
+ development but has since seen a decline in usage due to the rise of modern JavaScript frameworks and libraries.
+
+2)How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery, JQuery Animation?
+===>
+*Applying CSS Using jQuery:
+
+jQuery allows you to manipulate CSS properties of HTML elements using its .css() method. Here's an example of how you can apply CSS using jQuery:
+example::
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery CSS Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Applying CSS using jQuery
+            $("#myElement").css("color", "blue");
+        });
+    </script>
+</head>
+<body>
+    <p id="myElement">This is a paragraph.</p>
+</body>
+</html>
+
+
+*Adding and Removing Classes Using jQuery:
+
+You can use the .addClass() and .removeClass() methods to add and remove classes from elements using jQuery:
+example::
+$(document).ready(function() {
+    // Adding and removing classes using jQuery
+    $("#myElement").addClass("highlighted");
+    $("#myElement").removeClass("highlighted");
+});
+
+
+jQuery Animation:
+
+jQuery provides various methods to create animations and transitions on HTML elements. One common method is .animate() which can be used to change CSS
+ properties gradually over a specified duration, creating animation effects.
+example::
+$(document).ready(function() {
+    // jQuery animation example
+    $("#myElement").animate({
+        width: "300px",
+        opacity: 0.5
+    }, 1000); // 1000ms duration
+});
+
+
+3)• How to create slider with animation?
+===>
+Creating a Slider with Animation:
+Creating a slider (carousel) with animation involves manipulating the position of images or content within a container. You can achieve this by 
+changing the left (or right) CSS property of the slider container using animations. Here's a simple example:
+
+/* CSS */
+#slider {
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slide {
+    display: inline-block;
+    width: 300px;
+}
+
+
+// jQuery Slider Animation
+$(document).ready(function() {
+    var slideWidth = $(".slide").width();
+    
+    function slideNext() {
+        $("#slider").animate({ marginLeft: -slideWidth }, 1000, function() {
+            $(".slide:first-child").appendTo("#slider");
+            $("#slider").css("marginLeft", 0);
+        });
+    }
+
+    setInterval(slideNext, 3000); // Slide every 3 seconds
+});
+
