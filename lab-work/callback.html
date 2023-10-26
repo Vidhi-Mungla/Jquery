@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+  <div id="output">Initial Text</div>
+
+  <script>
+    $(document).ready(function() {
+      $("#myButton").click(function() {
+        $("#output").text("Button Clicked!");
+
+        alertAfterTextChange("Text has been changed!", function() {
+          console.log("Alert callback function executed.");
+        });
+      });
+
+      function alertAfterTextChange(message, callback) {
+        alert(message);
+
+        if (typeof callback === "function") {
+          callback();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
